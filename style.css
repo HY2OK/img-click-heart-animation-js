@@ -1,4 +1,4 @@
-.imgBox {
+.box {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -6,12 +6,52 @@
     align-items: center;
 }
 
-.imgBox img {
+.box .img {
+    position: relative;
     width: 400px;
+    height: 80%;
+    background-image: url('https://images.wallpaperscraft.com/image/single/bicycle_glass_book_145654_2160x3840.jpg');
+    background-size: cover;
     border-radius: 20px;
     box-shadow: 5px 5px 5px gray;
 }
 
-.imgBox img:hover {
+.box .img:hover {
     cursor: pointer;
+}
+
+.box .img i.heart {
+    position: absolute;
+    font-size: 40px;
+    color: red;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+.box .img i.heart.active {
+    animation: heartanimate 1s linear forwards;
+}
+
+@keyframes heartanimate {
+    30% {
+        font-size: 80px;
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+        font-size: 60px;
+    }
+    70% {
+        font-size: 70px;
+    }
+    80% {
+        font-size: 60px;
+        opacity: 1;
+    }
+    90% {
+        font-size: 60px;
+        opacity: 1;
+    }
 }
