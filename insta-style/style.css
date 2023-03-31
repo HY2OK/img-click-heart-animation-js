@@ -31,21 +31,24 @@ body {
 }
 
 .imageBar .image {
+    position: relative;
     width: 550px;
     height: 620px;
     background-image: url('https://images.wallpaperscraft.com/image/single/cup_coffee_cappuccino_115179_800x1200.jpg');
     background-size: cover;
     font-size: 40px;
     color: red;
+    cursor: pointer;
 }
 
 .imageBar .image .heart {
+    position: absolute;
     opacity: 0;
     transform: translate(-50%, -50%);
 }
 
 .imageBar .image .heart.active {
-    animation: heartAni 0.8s linear;
+    animation: heartAni 0.8s linear forwards;
 }
 
 @keyframes heartAni {
